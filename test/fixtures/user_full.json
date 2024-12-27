@@ -1,0 +1,6 @@
+{
+    "uid": "testUID",
+    "email": "test@example.com",
+    "displayName": "Test User",
+    "isEmailVerified": true
+}
