@@ -1,39 +1,99 @@
-<!--
-This README describes the package. If you publish this package to pub.dev,
-this README's contents appear on the landing page for your package.
+# Authentication Package
 
-For information about how to write a good package README, see the guide for
-[writing package pages](https://dart.dev/tools/pub/writing-package-pages).
-
-For general information about developing packages, see the Dart guide for
-[creating packages](https://dart.dev/guides/libraries/create-packages)
-and the Flutter guide for
-[developing packages and plugins](https://flutter.dev/to/develop-packages).
--->
-
-TODO: Put a short description of the package here that helps potential users
-know whether this package might be useful for them.
+A clean architecture Flutter authentication package that provides Firebase authentication integration with BLoC pattern state management.
 
 ## Features
 
-TODO: List what your package can do. Maybe include images, gifs, or videos.
+- 🔐 Firebase Authentication integration
+- 📱 User registration and login
+- 🔄 Password reset functionality
+- ⚡ BLoC pattern state management
+- ✨ Clean architecture principles
+- 🧪 Comprehensive test coverage
 
-## Getting started
+## Installation
 
-TODO: List prerequisites and provide or point to information on how to
-start using the package.
+Add this to your package's `pubspec.yaml` file:
+
+```yaml
+dependencies:
+  authentication:
+    git:
+      url: https://github.com/wesley990/authentication.git
+      ref: main
+```
+
+## Requirements
+
+- Dart SDK: ">=3.6.0"
+- Flutter: ">=1.17.0"
+- Firebase project setup with Firebase Auth enabled
 
 ## Usage
 
-TODO: Include short and useful examples for package users. Add longer examples
-to `/example` folder.
+1. Initialize Firebase in your main.dart:
 
 ```dart
-const like = 'sample';
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+  runApp(MyApp());
+}
 ```
 
-## Additional information
+2. Basic authentication example:
 
-TODO: Tell users more about the package: where to find more information, how to
-contribute to the package, how to file issues, what response they can expect
-from the package authors, and more.
+```dart
+// Create an authentication bloc
+final authBloc = AuthenticationBloc();
+
+// Login
+authBloc.add(const AuthenticationEvent.signInWithEmailAndPassword(
+  email: 'user@example.com',
+  password: 'password123'
+));
+
+// Register
+authBloc.add(const AuthenticationEvent.signUpWithEmailAndPassword(
+  email: 'newuser@example.com',
+  password: 'newpassword123'
+));
+
+// Reset password
+authBloc.add(const AuthenticationEvent.resetPassword(
+  email: 'user@example.com'
+));
+
+// Logout
+authBloc.add(const AuthenticationEvent.signOut());
+```
+
+## State Management
+
+The package uses `flutter_bloc` for state management with the following states:
+
+- `AuthenticationInitial` - Initial state
+- `AuthenticationLoading` - During authentication processes
+- `AuthenticationAuthenticated` - User is authenticated
+- `AuthenticationUnauthenticated` - User is not authenticated
+- `AuthenticationFailure` - Authentication process failed
+
+## Testing
+
+Run the tests using:
+
+```bash
+flutter test
+```
+
+## Contributing
+
+1. Fork the repository
+2. Create your feature branch
+3. Commit your changes
+4. Push to the branch
+5. Create a Pull Request
+
+## License
+
+This project is licensed under the MIT License.
