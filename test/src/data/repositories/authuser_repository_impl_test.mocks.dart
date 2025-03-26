@@ -25,13 +25,8 @@ import 'package:mockito/mockito.dart' as _i1;
 // ignore_for_file: subtype_of_sealed_class
 
 class _FakeAuthUserModel_0 extends _i1.SmartFake implements _i2.AuthUserModel {
-  _FakeAuthUserModel_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeAuthUserModel_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [IAuthDataSource].
@@ -48,26 +43,21 @@ class MockIAuthDataSource extends _i1.Mock implements _i3.IAuthDataSource {
     required String? password,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #signInWithCredential,
-          [],
-          {
-            #email: email,
-            #password: password,
-          },
-        ),
-        returnValue: _i4.Future<_i2.AuthUserModel>.value(_FakeAuthUserModel_0(
-          this,
-          Invocation.method(
-            #signInWithCredential,
-            [],
-            {
+            Invocation.method(#signInWithCredential, [], {
               #email: email,
               #password: password,
-            },
-          ),
-        )),
-      ) as _i4.Future<_i2.AuthUserModel>);
+            }),
+            returnValue: _i4.Future<_i2.AuthUserModel>.value(
+              _FakeAuthUserModel_0(
+                this,
+                Invocation.method(#signInWithCredential, [], {
+                  #email: email,
+                  #password: password,
+                }),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.AuthUserModel>);
 
   @override
   _i4.Future<_i2.AuthUserModel> signUpWithCredential({
@@ -75,53 +65,45 @@ class MockIAuthDataSource extends _i1.Mock implements _i3.IAuthDataSource {
     required String? password,
   }) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #signUpWithCredential,
-          [],
-          {
-            #email: email,
-            #password: password,
-          },
-        ),
-        returnValue: _i4.Future<_i2.AuthUserModel>.value(_FakeAuthUserModel_0(
-          this,
-          Invocation.method(
-            #signUpWithCredential,
-            [],
-            {
+            Invocation.method(#signUpWithCredential, [], {
               #email: email,
               #password: password,
-            },
-          ),
-        )),
-      ) as _i4.Future<_i2.AuthUserModel>);
+            }),
+            returnValue: _i4.Future<_i2.AuthUserModel>.value(
+              _FakeAuthUserModel_0(
+                this,
+                Invocation.method(#signUpWithCredential, [], {
+                  #email: email,
+                  #password: password,
+                }),
+              ),
+            ),
+          )
+          as _i4.Future<_i2.AuthUserModel>);
 
   @override
-  _i4.Future<void> signOut() => (super.noSuchMethod(
-        Invocation.method(
-          #signOut,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+  _i4.Future<void> signOut() =>
+      (super.noSuchMethod(
+            Invocation.method(#signOut, []),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
 
   @override
-  _i4.Stream<_i2.AuthUserModel?> userChanges() => (super.noSuchMethod(
-        Invocation.method(
-          #userChanges,
-          [],
-        ),
-        returnValue: _i4.Stream<_i2.AuthUserModel?>.empty(),
-      ) as _i4.Stream<_i2.AuthUserModel?>);
+  _i4.Stream<_i2.AuthUserModel?> userChanges() =>
+      (super.noSuchMethod(
+            Invocation.method(#userChanges, []),
+            returnValue: _i4.Stream<_i2.AuthUserModel?>.empty(),
+          )
+          as _i4.Stream<_i2.AuthUserModel?>);
 
   @override
-  _i4.Future<void> sendEmailVerification() => (super.noSuchMethod(
-        Invocation.method(
-          #sendEmailVerification,
-          [],
-        ),
-        returnValue: _i4.Future<void>.value(),
-        returnValueForMissingStub: _i4.Future<void>.value(),
-      ) as _i4.Future<void>);
+  _i4.Future<void> sendEmailVerification() =>
+      (super.noSuchMethod(
+            Invocation.method(#sendEmailVerification, []),
+            returnValue: _i4.Future<void>.value(),
+            returnValueForMissingStub: _i4.Future<void>.value(),
+          )
+          as _i4.Future<void>);
 }

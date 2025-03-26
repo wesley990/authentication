@@ -1,3 +1,4 @@
+// dart format width=80
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: type=lint
@@ -9,198 +10,142 @@ part of 'auth_user.dart';
 // FreezedGenerator
 // **************************************************************************
 
+// dart format off
 T _$identity<T>(T value) => value;
-
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more information: https://github.com/rrousselGit/freezed#adding-getters-and-methods-to-our-models');
-
 /// @nodoc
 mixin _$AuthUser {
-  String get uid => throw _privateConstructorUsedError;
-  String get email => throw _privateConstructorUsedError;
-  String? get displayName => throw _privateConstructorUsedError;
-  bool get isEmailVerified => throw _privateConstructorUsedError;
 
-  /// Create a copy of AuthUser
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  $AuthUserCopyWith<AuthUser> get copyWith =>
-      throw _privateConstructorUsedError;
+ String get uid; String get email; String? get displayName; bool get isEmailVerified;
+/// Create a copy of AuthUser
+/// with the given fields replaced by the non-null parameter values.
+@JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+$AuthUserCopyWith<AuthUser> get copyWith => _$AuthUserCopyWithImpl<AuthUser>(this as AuthUser, _$identity);
+
+
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is AuthUser&&(identical(other.uid, uid) || other.uid == uid)&&(identical(other.email, email) || other.email == email)&&(identical(other.displayName, displayName) || other.displayName == displayName)&&(identical(other.isEmailVerified, isEmailVerified) || other.isEmailVerified == isEmailVerified));
+}
+
+
+@override
+int get hashCode => Object.hash(runtimeType,uid,email,displayName,isEmailVerified);
+
+@override
+String toString() {
+  return 'AuthUser(uid: $uid, email: $email, displayName: $displayName, isEmailVerified: $isEmailVerified)';
+}
+
+
 }
 
 /// @nodoc
-abstract class $AuthUserCopyWith<$Res> {
-  factory $AuthUserCopyWith(AuthUser value, $Res Function(AuthUser) then) =
-      _$AuthUserCopyWithImpl<$Res, AuthUser>;
-  @useResult
-  $Res call(
-      {String uid, String email, String? displayName, bool isEmailVerified});
-}
+abstract mixin class $AuthUserCopyWith<$Res>  {
+  factory $AuthUserCopyWith(AuthUser value, $Res Function(AuthUser) _then) = _$AuthUserCopyWithImpl;
+@useResult
+$Res call({
+ String uid, String email, String? displayName, bool isEmailVerified
+});
 
+
+
+
+}
 /// @nodoc
-class _$AuthUserCopyWithImpl<$Res, $Val extends AuthUser>
+class _$AuthUserCopyWithImpl<$Res>
     implements $AuthUserCopyWith<$Res> {
-  _$AuthUserCopyWithImpl(this._value, this._then);
+  _$AuthUserCopyWithImpl(this._self, this._then);
 
-  // ignore: unused_field
-  final $Val _value;
-  // ignore: unused_field
-  final $Res Function($Val) _then;
+  final AuthUser _self;
+  final $Res Function(AuthUser) _then;
 
-  /// Create a copy of AuthUser
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? uid = null,
-    Object? email = null,
-    Object? displayName = freezed,
-    Object? isEmailVerified = null,
-  }) {
-    return _then(_value.copyWith(
-      uid: null == uid
-          ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: freezed == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isEmailVerified: null == isEmailVerified
-          ? _value.isEmailVerified
-          : isEmailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ) as $Val);
-  }
+/// Create a copy of AuthUser
+/// with the given fields replaced by the non-null parameter values.
+@pragma('vm:prefer-inline') @override $Res call({Object? uid = null,Object? email = null,Object? displayName = freezed,Object? isEmailVerified = null,}) {
+  return _then(_self.copyWith(
+uid: null == uid ? _self.uid : uid // ignore: cast_nullable_to_non_nullable
+as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,displayName: freezed == displayName ? _self.displayName : displayName // ignore: cast_nullable_to_non_nullable
+as String?,isEmailVerified: null == isEmailVerified ? _self.isEmailVerified : isEmailVerified // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
 }
 
-/// @nodoc
-abstract class _$$AuthUserImplCopyWith<$Res>
-    implements $AuthUserCopyWith<$Res> {
-  factory _$$AuthUserImplCopyWith(
-          _$AuthUserImpl value, $Res Function(_$AuthUserImpl) then) =
-      __$$AuthUserImplCopyWithImpl<$Res>;
-  @override
-  @useResult
-  $Res call(
-      {String uid, String email, String? displayName, bool isEmailVerified});
 }
 
-/// @nodoc
-class __$$AuthUserImplCopyWithImpl<$Res>
-    extends _$AuthUserCopyWithImpl<$Res, _$AuthUserImpl>
-    implements _$$AuthUserImplCopyWith<$Res> {
-  __$$AuthUserImplCopyWithImpl(
-      _$AuthUserImpl _value, $Res Function(_$AuthUserImpl) _then)
-      : super(_value, _then);
-
-  /// Create a copy of AuthUser
-  /// with the given fields replaced by the non-null parameter values.
-  @pragma('vm:prefer-inline')
-  @override
-  $Res call({
-    Object? uid = null,
-    Object? email = null,
-    Object? displayName = freezed,
-    Object? isEmailVerified = null,
-  }) {
-    return _then(_$AuthUserImpl(
-      uid: null == uid
-          ? _value.uid
-          : uid // ignore: cast_nullable_to_non_nullable
-              as String,
-      email: null == email
-          ? _value.email
-          : email // ignore: cast_nullable_to_non_nullable
-              as String,
-      displayName: freezed == displayName
-          ? _value.displayName
-          : displayName // ignore: cast_nullable_to_non_nullable
-              as String?,
-      isEmailVerified: null == isEmailVerified
-          ? _value.isEmailVerified
-          : isEmailVerified // ignore: cast_nullable_to_non_nullable
-              as bool,
-    ));
-  }
-}
 
 /// @nodoc
 
-class _$AuthUserImpl extends _AuthUser {
-  const _$AuthUserImpl(
-      {required this.uid,
-      required this.email,
-      this.displayName,
-      this.isEmailVerified = false})
-      : super._();
 
-  @override
-  final String uid;
-  @override
-  final String email;
-  @override
-  final String? displayName;
-  @override
-  @JsonKey()
-  final bool isEmailVerified;
+class _AuthUser extends AuthUser {
+  const _AuthUser({required this.uid, required this.email, this.displayName, this.isEmailVerified = false}): super._();
+  
 
-  @override
-  String toString() {
-    return 'AuthUser(uid: $uid, email: $email, displayName: $displayName, isEmailVerified: $isEmailVerified)';
-  }
+@override final  String uid;
+@override final  String email;
+@override final  String? displayName;
+@override@JsonKey() final  bool isEmailVerified;
 
-  @override
-  bool operator ==(Object other) {
-    return identical(this, other) ||
-        (other.runtimeType == runtimeType &&
-            other is _$AuthUserImpl &&
-            (identical(other.uid, uid) || other.uid == uid) &&
-            (identical(other.email, email) || other.email == email) &&
-            (identical(other.displayName, displayName) ||
-                other.displayName == displayName) &&
-            (identical(other.isEmailVerified, isEmailVerified) ||
-                other.isEmailVerified == isEmailVerified));
-  }
+/// Create a copy of AuthUser
+/// with the given fields replaced by the non-null parameter values.
+@override @JsonKey(includeFromJson: false, includeToJson: false)
+@pragma('vm:prefer-inline')
+_$AuthUserCopyWith<_AuthUser> get copyWith => __$AuthUserCopyWithImpl<_AuthUser>(this, _$identity);
 
-  @override
-  int get hashCode =>
-      Object.hash(runtimeType, uid, email, displayName, isEmailVerified);
 
-  /// Create a copy of AuthUser
-  /// with the given fields replaced by the non-null parameter values.
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  @override
-  @pragma('vm:prefer-inline')
-  _$$AuthUserImplCopyWith<_$AuthUserImpl> get copyWith =>
-      __$$AuthUserImplCopyWithImpl<_$AuthUserImpl>(this, _$identity);
+
+@override
+bool operator ==(Object other) {
+  return identical(this, other) || (other.runtimeType == runtimeType&&other is _AuthUser&&(identical(other.uid, uid) || other.uid == uid)&&(identical(other.email, email) || other.email == email)&&(identical(other.displayName, displayName) || other.displayName == displayName)&&(identical(other.isEmailVerified, isEmailVerified) || other.isEmailVerified == isEmailVerified));
 }
 
-abstract class _AuthUser extends AuthUser {
-  const factory _AuthUser(
-      {required final String uid,
-      required final String email,
-      final String? displayName,
-      final bool isEmailVerified}) = _$AuthUserImpl;
-  const _AuthUser._() : super._();
 
-  @override
-  String get uid;
-  @override
-  String get email;
-  @override
-  String? get displayName;
-  @override
-  bool get isEmailVerified;
+@override
+int get hashCode => Object.hash(runtimeType,uid,email,displayName,isEmailVerified);
 
-  /// Create a copy of AuthUser
-  /// with the given fields replaced by the non-null parameter values.
-  @override
-  @JsonKey(includeFromJson: false, includeToJson: false)
-  _$$AuthUserImplCopyWith<_$AuthUserImpl> get copyWith =>
-      throw _privateConstructorUsedError;
+@override
+String toString() {
+  return 'AuthUser(uid: $uid, email: $email, displayName: $displayName, isEmailVerified: $isEmailVerified)';
 }
+
+
+}
+
+/// @nodoc
+abstract mixin class _$AuthUserCopyWith<$Res> implements $AuthUserCopyWith<$Res> {
+  factory _$AuthUserCopyWith(_AuthUser value, $Res Function(_AuthUser) _then) = __$AuthUserCopyWithImpl;
+@override @useResult
+$Res call({
+ String uid, String email, String? displayName, bool isEmailVerified
+});
+
+
+
+
+}
+/// @nodoc
+class __$AuthUserCopyWithImpl<$Res>
+    implements _$AuthUserCopyWith<$Res> {
+  __$AuthUserCopyWithImpl(this._self, this._then);
+
+  final _AuthUser _self;
+  final $Res Function(_AuthUser) _then;
+
+/// Create a copy of AuthUser
+/// with the given fields replaced by the non-null parameter values.
+@override @pragma('vm:prefer-inline') $Res call({Object? uid = null,Object? email = null,Object? displayName = freezed,Object? isEmailVerified = null,}) {
+  return _then(_AuthUser(
+uid: null == uid ? _self.uid : uid // ignore: cast_nullable_to_non_nullable
+as String,email: null == email ? _self.email : email // ignore: cast_nullable_to_non_nullable
+as String,displayName: freezed == displayName ? _self.displayName : displayName // ignore: cast_nullable_to_non_nullable
+as String?,isEmailVerified: null == isEmailVerified ? _self.isEmailVerified : isEmailVerified // ignore: cast_nullable_to_non_nullable
+as bool,
+  ));
+}
+
+
+}
+
+// dart format on

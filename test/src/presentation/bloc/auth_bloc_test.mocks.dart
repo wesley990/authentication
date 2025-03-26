@@ -3,22 +3,24 @@
 // Do not manually edit this file.
 
 // ignore_for_file: no_leading_underscores_for_library_prefixes
-import 'dart:async' as _i6;
+import 'dart:async' as _i5;
 
-import 'package:authentication/src/domain/entities/auth_user.dart' as _i3;
+import 'package:authentication/src/domain/entities/auth_user.dart' as _i6;
 import 'package:authentication/src/domain/repositories/i_authuser_repository.dart'
     as _i2;
 import 'package:authentication/src/domain/usecases/get_current_user_usecase.dart'
-    as _i4;
+    as _i3;
 import 'package:authentication/src/domain/usecases/i_base_usecases.dart' as _i8;
 import 'package:authentication/src/domain/usecases/send_email_verification_usecase.dart'
-    as _i11;
+    as _i12;
 import 'package:authentication/src/domain/usecases/signin_usecase.dart' as _i7;
-import 'package:authentication/src/domain/usecases/signout_usecase.dart' as _i9;
-import 'package:authentication/src/domain/usecases/signup_usecase.dart' as _i10;
+import 'package:authentication/src/domain/usecases/signout_usecase.dart'
+    as _i10;
+import 'package:authentication/src/domain/usecases/signup_usecase.dart' as _i11;
 import 'package:authentication/src/domain/usecases/user_changes_usecase.dart'
-    as _i5;
+    as _i4;
 import 'package:mockito/mockito.dart' as _i1;
+import 'package:mockito/src/dummies.dart' as _i9;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values
@@ -36,79 +38,66 @@ import 'package:mockito/mockito.dart' as _i1;
 
 class _FakeIAuthUserRepository_0 extends _i1.SmartFake
     implements _i2.IAuthUserRepository {
-  _FakeIAuthUserRepository_0(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
-}
-
-class _FakeAuthUser_1 extends _i1.SmartFake implements _i3.AuthUser {
-  _FakeAuthUser_1(
-    Object parent,
-    Invocation parentInvocation,
-  ) : super(
-          parent,
-          parentInvocation,
-        );
+  _FakeIAuthUserRepository_0(Object parent, Invocation parentInvocation)
+    : super(parent, parentInvocation);
 }
 
 /// A class which mocks [GetCurrentUserUseCase].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockGetCurrentUserUseCase extends _i1.Mock
-    implements _i4.GetCurrentUserUseCase {
+    implements _i3.GetCurrentUserUseCase {
   MockGetCurrentUserUseCase() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 }
 
 /// A class which mocks [UserChangesUseCase].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockUserChangesUseCase extends _i1.Mock
-    implements _i5.UserChangesUseCase {
+    implements _i4.UserChangesUseCase {
   MockUserChangesUseCase() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 
   @override
-  _i6.Stream<_i3.AuthUser?> execute() => (super.noSuchMethod(
-        Invocation.method(
-          #execute,
-          [],
-        ),
-        returnValue: _i6.Stream<_i3.AuthUser?>.empty(),
-      ) as _i6.Stream<_i3.AuthUser?>);
+  _i5.Stream<_i6.AuthUser?> execute() =>
+      (super.noSuchMethod(
+            Invocation.method(#execute, []),
+            returnValue: _i5.Stream<_i6.AuthUser?>.empty(),
+          )
+          as _i5.Stream<_i6.AuthUser?>);
 
   @override
-  _i6.Stream<_i3.AuthUser?> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i6.Stream<_i3.AuthUser?>.empty(),
-      ) as _i6.Stream<_i3.AuthUser?>);
+  _i5.Stream<_i6.AuthUser?> call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i5.Stream<_i6.AuthUser?>.empty(),
+          )
+          as _i5.Stream<_i6.AuthUser?>);
 }
 
 /// A class which mocks [SignInUseCase].
@@ -120,170 +109,162 @@ class MockSignInUseCase extends _i1.Mock implements _i7.SignInUseCase {
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 
   @override
-  _i6.Future<_i3.AuthUser> execute(_i8.SignInParams? params) =>
+  _i5.Future<_i6.AuthUser> execute(_i8.SignInParams? params) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #execute,
-          [params],
-        ),
-        returnValue: _i6.Future<_i3.AuthUser>.value(_FakeAuthUser_1(
-          this,
-          Invocation.method(
-            #execute,
-            [params],
-          ),
-        )),
-      ) as _i6.Future<_i3.AuthUser>);
+            Invocation.method(#execute, [params]),
+            returnValue: _i5.Future<_i6.AuthUser>.value(
+              _i9.dummyValue<_i6.AuthUser>(
+                this,
+                Invocation.method(#execute, [params]),
+              ),
+            ),
+          )
+          as _i5.Future<_i6.AuthUser>);
 
   @override
-  _i6.Future<_i3.AuthUser> call(_i8.SignInParams? params) =>
+  _i5.Future<_i6.AuthUser> call(_i8.SignInParams? params) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [params],
-        ),
-        returnValue: _i6.Future<_i3.AuthUser>.value(_FakeAuthUser_1(
-          this,
-          Invocation.method(
-            #call,
-            [params],
-          ),
-        )),
-      ) as _i6.Future<_i3.AuthUser>);
+            Invocation.method(#call, [params]),
+            returnValue: _i5.Future<_i6.AuthUser>.value(
+              _i9.dummyValue<_i6.AuthUser>(
+                this,
+                Invocation.method(#call, [params]),
+              ),
+            ),
+          )
+          as _i5.Future<_i6.AuthUser>);
 }
 
 /// A class which mocks [SignOutUseCase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSignOutUseCase extends _i1.Mock implements _i9.SignOutUseCase {
+class MockSignOutUseCase extends _i1.Mock implements _i10.SignOutUseCase {
   MockSignOutUseCase() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 
   @override
-  _i6.Future<void> execute() => (super.noSuchMethod(
-        Invocation.method(
-          #execute,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+  _i5.Future<void> execute() =>
+      (super.noSuchMethod(
+            Invocation.method(#execute, []),
+            returnValue: _i5.Future<void>.value(),
+            returnValueForMissingStub: _i5.Future<void>.value(),
+          )
+          as _i5.Future<void>);
 
   @override
-  _i6.Future<void> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+  _i5.Future<void> call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i5.Future<void>.value(),
+            returnValueForMissingStub: _i5.Future<void>.value(),
+          )
+          as _i5.Future<void>);
 }
 
 /// A class which mocks [SignUpUseCase].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockSignUpUseCase extends _i1.Mock implements _i10.SignUpUseCase {
+class MockSignUpUseCase extends _i1.Mock implements _i11.SignUpUseCase {
   MockSignUpUseCase() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 
   @override
-  _i6.Future<_i3.AuthUser> execute(_i8.SignUpParams? params) =>
+  _i5.Future<_i6.AuthUser> execute(_i8.SignUpParams? params) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #execute,
-          [params],
-        ),
-        returnValue: _i6.Future<_i3.AuthUser>.value(_FakeAuthUser_1(
-          this,
-          Invocation.method(
-            #execute,
-            [params],
-          ),
-        )),
-      ) as _i6.Future<_i3.AuthUser>);
+            Invocation.method(#execute, [params]),
+            returnValue: _i5.Future<_i6.AuthUser>.value(
+              _i9.dummyValue<_i6.AuthUser>(
+                this,
+                Invocation.method(#execute, [params]),
+              ),
+            ),
+          )
+          as _i5.Future<_i6.AuthUser>);
 
   @override
-  _i6.Future<_i3.AuthUser> call(_i8.SignUpParams? params) =>
+  _i5.Future<_i6.AuthUser> call(_i8.SignUpParams? params) =>
       (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [params],
-        ),
-        returnValue: _i6.Future<_i3.AuthUser>.value(_FakeAuthUser_1(
-          this,
-          Invocation.method(
-            #call,
-            [params],
-          ),
-        )),
-      ) as _i6.Future<_i3.AuthUser>);
+            Invocation.method(#call, [params]),
+            returnValue: _i5.Future<_i6.AuthUser>.value(
+              _i9.dummyValue<_i6.AuthUser>(
+                this,
+                Invocation.method(#call, [params]),
+              ),
+            ),
+          )
+          as _i5.Future<_i6.AuthUser>);
 }
 
 /// A class which mocks [SendEmailVerificationUseCase].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockSendEmailVerificationUseCase extends _i1.Mock
-    implements _i11.SendEmailVerificationUseCase {
+    implements _i12.SendEmailVerificationUseCase {
   MockSendEmailVerificationUseCase() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i2.IAuthUserRepository get repository => (super.noSuchMethod(
-        Invocation.getter(#repository),
-        returnValue: _FakeIAuthUserRepository_0(
-          this,
-          Invocation.getter(#repository),
-        ),
-      ) as _i2.IAuthUserRepository);
+  _i2.IAuthUserRepository get repository =>
+      (super.noSuchMethod(
+            Invocation.getter(#repository),
+            returnValue: _FakeIAuthUserRepository_0(
+              this,
+              Invocation.getter(#repository),
+            ),
+          )
+          as _i2.IAuthUserRepository);
 
   @override
-  _i6.Future<void> execute() => (super.noSuchMethod(
-        Invocation.method(
-          #execute,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+  _i5.Future<void> execute() =>
+      (super.noSuchMethod(
+            Invocation.method(#execute, []),
+            returnValue: _i5.Future<void>.value(),
+            returnValueForMissingStub: _i5.Future<void>.value(),
+          )
+          as _i5.Future<void>);
 
   @override
-  _i6.Future<void> call() => (super.noSuchMethod(
-        Invocation.method(
-          #call,
-          [],
-        ),
-        returnValue: _i6.Future<void>.value(),
-        returnValueForMissingStub: _i6.Future<void>.value(),
-      ) as _i6.Future<void>);
+  _i5.Future<void> call() =>
+      (super.noSuchMethod(
+            Invocation.method(#call, []),
+            returnValue: _i5.Future<void>.value(),
+            returnValueForMissingStub: _i5.Future<void>.value(),
+          )
+          as _i5.Future<void>);
 }

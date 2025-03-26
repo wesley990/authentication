@@ -4,7 +4,7 @@ part 'auth_user.freezed.dart';
 
 /// Represents a user in the authentication system.
 @freezed
-class AuthUser with _$AuthUser {
+sealed class AuthUser with _$AuthUser {
   /// Creates an instance of [AuthUser].
   ///
   /// [uid] is the unique identifier for the user.
