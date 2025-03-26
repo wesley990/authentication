@@ -8,8 +8,8 @@ environment:
   sdk: ^3.7.2
 
 dependencies:
-  flutter:
-    sdk: flutter
+  # flutter:
+  #   sdk: flutter
   firebase_auth: ^5.5.1
   flutter_bloc: ^9.1.0
   freezed_annotation: ^3.0.0
