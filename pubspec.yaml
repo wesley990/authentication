@@ -1,6 +1,6 @@
 name: authentication
 description: Clean architecture authentication package with Firebase
-version: 1.0.0
+version: 1.0.1
 repository: https://github.com/wesley990/authentication
 homepage: https://github.com/wesley990/authentication
 
