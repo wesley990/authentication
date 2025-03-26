@@ -6,7 +6,6 @@ homepage: https://github.com/wesley990/authentication
 
 environment:
   sdk: ^3.7.2
-  flutter: ">=3.29.2"
 
 dependencies:
   flutter:
